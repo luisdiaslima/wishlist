@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const MainContainer = styled.div`
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     padding: 35px;
 
