@@ -15,7 +15,8 @@ import {
     DrawerButton,
     Backdrop,
     Drawer,
-    CloseDrawer
+    CloseDrawer,
+    HeaderMobileContent
 } from "./styles";
 import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
@@ -23,6 +24,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useCallback } from "react";
 import Search from "../SearchField";
+import { SearchField } from "../SearchField/styles";
 
 const Header = () => {
     const router = useRouter();
@@ -42,15 +44,25 @@ const Header = () => {
     }, [router])
     return (
         <HeaderContent>
+            
+            <HeaderMobileContent>
+                <div>
+                    <DrawerButton onClick={() => setOpenDrawer(!openDrawer)}>
+                        <FaBars />
+                    </DrawerButton>
 
-            <DrawerButton onClick={() => setOpenDrawer(!openDrawer)}>
-                <FaBars />
-            </DrawerButton>
+                    <TitleHeader onClick={() => router.push("/")}>
+                        MagaNets
+                    </TitleHeader>    
+                </div>
+                <SearchField placeholder="Buscar"  />
+            </HeaderMobileContent>
 
-            <TitleHeader onClick={() => router.push("/")}>
-                MagaNets
-            </TitleHeader> 
-
+        
+            <TitleHeader className="sm-none" onClick={() => router.push("/")}>
+                    MagaNets
+            </TitleHeader>
+            
              <ItemsContent>
                 <ButtonsContainer>
                     <ButtonHeader>

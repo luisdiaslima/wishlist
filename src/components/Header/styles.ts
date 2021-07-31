@@ -155,3 +155,22 @@ export const ButtonsContainer = styled.div`
     width: 100%;
     height: 100%;
 `;
+
+export const HeaderMobileContent = styled.div`
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+   > div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    @media(max-width: 414px) {
+        display: flex;
+    }
+`;
