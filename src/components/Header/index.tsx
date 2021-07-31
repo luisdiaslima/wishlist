@@ -29,7 +29,6 @@ const Header = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
 
     useEffect(() => {
-        console.log("loop")
         if (openDrawer) {
             document.body.style.overflowY = "hidden";
         } else {
