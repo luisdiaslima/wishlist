@@ -10,6 +10,27 @@ a {
   text-decoration: none;
 }
 
+#__next {
+  background: #F9F9F9;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
+}
+
+
+#header-search {
+  display: inline-block; width: 200px; height: 32px;
+  background: black; color: white; border: none; outline: none;
+  font-size: 12pt;
+  padding-left: 28px;
+  vertical-align: middle;
+}
+#search-icon {
+  position: relative; left: 28px;
+  fill: white; width: 24px; left: 24px;
+  vertical-align: middle; cursor: pointer;
 }

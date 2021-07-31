@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React from 'react';
-import { Container } from '../components/Layout/styles';
+import { MainContainer } from '../../styles/globalStyles';
 import ProductList from '../components/ProductsList';
 import { IProduct } from '../types';
 
 export default function Home({ products }:  { products: IProduct[] }) {
   return (
-    <Container>
+    <MainContainer>
       <ProductList products={products} />
-    </Container>
+    </MainContainer>
   )
 }
 

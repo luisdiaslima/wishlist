@@ -8,11 +8,12 @@ import { IProduct } from '../../types';
 import { useWishList } from '../../hooks/wishlist';
 
 
-const ProductCard= ({ product, removeButton }: { product: IProduct, removeButton?: boolean }) => {
+const ProductCard= ({ product, removeButton = false }: { product: IProduct, removeButton?: boolean }) => {
     const { addToWishList, wishList = [] } = useWishList();
+
     return (
         <ProductContainer>
-            {removeButton ? (
+            {!!removeButton ? (
                 <RemoveThis>
                     <RiCloseCircleLine onClick={() => addToWishList(product.id.toString())} />
                 </RemoveThis>

@@ -8,9 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProvider>
       <Layout>
-        <Head>
-          <title>MageNets</title>
-        </Head>
+
         <Component {...pageProps} />
       </Layout> 
     </AppProvider>

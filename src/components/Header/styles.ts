@@ -92,7 +92,6 @@ export const CloseDrawer = styled.div`
 `;
 
 export const TitleHeader = styled.h1`    
-    font-size: 2.2rem;
     color: #FFF;
     font-weight: 700;
 
@@ -150,11 +149,4 @@ export const ButtonsContainer = styled.div`
 
     width: 100%;
     height: 100%;
-`;
-
-export const SearchField = styled.input`
-    width: 100%;
-    height: 80px;
-
-    border-radius: 5px;
 `;

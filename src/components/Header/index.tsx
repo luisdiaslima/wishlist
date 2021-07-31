@@ -6,14 +6,23 @@ import { AiFillHeart } from 'react-icons/ai';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { FaBars } from 'react-icons/fa';
 
-
-
-import { HeaderContent, ButtonsContainer, TitleHeader, ButtonHeader, SearchField, ItemsContent, DrawerButton, Backdrop, Drawer, CloseDrawer } from "./styles"
+import { 
+    HeaderContent,
+    ButtonsContainer,
+    TitleHeader,
+    ButtonHeader,
+    ItemsContent,
+    DrawerButton,
+    Backdrop,
+    Drawer,
+    CloseDrawer
+} from "./styles";
 import { useRouter } from "next/dist/client/router";
 import { useState } from "react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useCallback } from "react";
+import Search from "../SearchField";
 
 const Header = () => {
     const router = useRouter();
@@ -60,8 +69,8 @@ const Header = () => {
                         <span>Lista de desejos</span>
                     </ButtonHeader>
                 </ButtonsContainer>
-
-                <SearchField />
+                
+                <Search />
             </ItemsContent>
         
         <Backdrop hidden={openDrawer}>
@@ -77,7 +86,7 @@ const Header = () => {
                     MagaNets
                 </h1>
                 <span onClick={() => handleNavigate("/")}>Início</span>
-                <span onClick={() => handleNavigate("/m")}>Lista de desejos</span>  
+                <span onClick={() => handleNavigate("/my-wishlist")}>Lista de desejos</span>  
             </Drawer>
             </motion.div>
             <CloseDrawer onClick={() => setOpenDrawer(!openDrawer)}>
