@@ -9,7 +9,7 @@ import { useWishList } from '../../hooks/wishlist';
 
 
 const ProductCard= ({ product, removeButton }: { product: IProduct, removeButton?: boolean }) => {
-    const { addToWishList, wishList } = useWishList();
+    const { addToWishList, wishList = [] } = useWishList();
     return (
         <ProductContainer>
             {removeButton ? (
@@ -17,7 +17,7 @@ const ProductCard= ({ product, removeButton }: { product: IProduct, removeButton
                     <RiCloseCircleLine onClick={() => addToWishList(product.id.toString())} />
                 </RemoveThis>
             ) : (
-                <WishThis isSelected={!!wishList.find((item) => item === product.id.toString())} onClick={() => addToWishList(product.id.toString())}>
+                <WishThis data-testid={`add-product[${product.id.toString()}]`} isSelected={!!wishList.find((item) => item === product.id.toString())} onClick={() => addToWishList(product.id.toString())}>
                     <AiFillHeart />
                 </WishThis>
             )}
@@ -26,7 +26,7 @@ const ProductCard= ({ product, removeButton }: { product: IProduct, removeButton
                 <ProductTitle>{product.title}</ProductTitle>
             </ProductInfo>
             <ProductPrice>
-                    {product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+                {product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
             </ProductPrice>
         </ProductContainer>
     );

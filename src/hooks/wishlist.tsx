@@ -5,11 +5,12 @@ import { useEffect } from 'react';
 
 interface WishListData {
   wishList: string[];
-  addToWishList(id: string): void
-  removeFromWishList(id: string): void
+  addToWishList(id: string): void;
+  removeFromWishList(id: string): void;
+  resetWishList(): void;
 }
 
-const WishList = createContext<WishListData>({} as WishListData)
+export const WishList = createContext<WishListData>({} as WishListData)
 
 export const WishListProvider: React.FC = ({ children }) => {
   const [wishList, setWishList] = useState<string[]>([] as string[]);
@@ -22,7 +23,7 @@ export const WishListProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
       localStorage.setItem("@wishlist", JSON.stringify(wishList));
-  }, [wishList])
+  }, [wishList]);
 
   const removeFromWishList = useCallback(
     (id: string) => {
@@ -32,14 +33,19 @@ export const WishListProvider: React.FC = ({ children }) => {
       setWishList(filterNewProducts);
     },
     [wishList]
-  )
+  );
+
   const addToWishList = useCallback((id: string) => {
     if (wishList.find((item) => item === id)) {
-        removeFromWishList(id)
+        removeFromWishList(id);
     } else {
-        setWishList((oldList) => [...oldList, id])
+        setWishList((oldList) => [...oldList, id]);
     }
-  }, [removeFromWishList, wishList])
+  }, [removeFromWishList, wishList]);
+
+  const resetWishList = useCallback(() => {
+    setWishList([]);
+  }, []);
 
   return (
     <WishList.Provider
@@ -47,6 +53,7 @@ export const WishListProvider: React.FC = ({ children }) => {
         wishList,
         addToWishList,
         removeFromWishList,
+        resetWishList,
       }}
     >
       {children}

@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React from 'react';
+import { Container } from '../components/Layout/styles';
 import ProductList from '../components/ProductsList';
 import { IProduct } from '../types';
 
 export default function Home({ products }:  { products: IProduct[] }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "35px" }}>
+    <Container>
       <ProductList products={products} />
-    </div>
+    </Container>
   )
 }
 

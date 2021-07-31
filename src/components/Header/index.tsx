@@ -1,8 +1,5 @@
 import React from "react"
 
-
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
 import { FaPhoneAlt} from 'react-icons/fa';
 import { IoLocationSharp } from 'react-icons/io5';
 import { AiFillHeart } from 'react-icons/ai';
