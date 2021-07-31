@@ -61,7 +61,7 @@ const Header = () => {
 
                     <ButtonHeader>
                         <FaPhoneAlt />
-                        <span>Centro de atendimento</span>
+                        <span>Central de atendimento</span>
                     </ButtonHeader>
 
                     <ButtonHeader onClick={() => router.push("/my-wishlist")}>
@@ -86,6 +86,7 @@ const Header = () => {
                     MagaNets
                 </h1>
                 <span onClick={() => handleNavigate("/")}>Início</span>
+                <span>Central de atendimento</span>  
                 <span onClick={() => handleNavigate("/my-wishlist")}>Lista de desejos</span>  
             </Drawer>
             </motion.div>

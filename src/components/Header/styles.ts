@@ -98,6 +98,10 @@ export const TitleHeader = styled.h1`
     cursor: pointer;
     margin-right: 100px;
 
+    @media(width: 768px) {
+        margin-right: 30px;
+    }
+
     @media(max-width: 414px) {
         margin: 0;
     }
@@ -133,6 +137,7 @@ export const ButtonHeader = styled.button`
         color: #FFF;
         font-weight: 600;
 
+        white-space: nowrap;
         margin-left: 10px;
     }
 
