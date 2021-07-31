@@ -8,11 +8,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProvider>
       <Layout>
-
+      <Head>
+        <title>MagaNets</title>
+      </Head>
         <Component {...pageProps} />
       </Layout> 
     </AppProvider>
 
   )
 }
-export default MyApp
+export default MyApp;

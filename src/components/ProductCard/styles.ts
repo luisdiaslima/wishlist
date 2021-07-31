@@ -14,7 +14,7 @@ export const ProductContainer = styled.div`
     position: relative;
 `;
 
-export const WishThis = styled.button<{ isSelected?: boolean }>`
+export const WishThis = styled.div<{ isSelected?: boolean }>`
     display: flex;
     align-items: center;
     position: absolute;
@@ -27,8 +27,6 @@ export const WishThis = styled.button<{ isSelected?: boolean }>`
     border-radius: 5px;
     
     background-color: black;
-    border: none;
-    outline: none;
     cursor: pointer;
 
     svg {
@@ -47,8 +45,6 @@ export const RemoveThis = styled.div`
     right: 0;
     
     background-color: transparent;
-    border: none;
-    outline: none;
     cursor: pointer;
 
     svg {
