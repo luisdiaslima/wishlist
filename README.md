@@ -8,6 +8,8 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+
+# access: http://localhost:3000/
 ```
 
 Run tests:
@@ -24,6 +26,8 @@ You can build this application:
 npm run build
 # or
 yarn start
+
+# access: http://localhost:3000/
 ```
 
 ## See in production
