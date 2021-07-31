@@ -33,6 +33,11 @@ You can build this application:
 ```bash
 npm run build
 # or
+yarn build
+
+# after this
+npm run start
+# or
 yarn start
 
 # access: http://localhost:3000/
