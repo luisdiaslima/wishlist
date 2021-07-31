@@ -20,3 +20,7 @@ export const WishListContainer = styled.div`
     min-height: calc(100vh - 260px);
 `;
 
+export const Title = styled.h1`
+    text-align: center;
+    font-weight: 700;
+`
