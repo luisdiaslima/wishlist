@@ -97,6 +97,7 @@ const Header = () => {
                     MagaNets
                 </h1>
                 <span onClick={() => handleNavigate("/")}>Início</span>
+                <span>Cidade: São Paulo</span>  
                 <span>Central de atendimento</span>  
                 <span onClick={() => handleNavigate("/my-wishlist")}>Lista de desejos</span>  
             </Drawer>
