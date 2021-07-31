@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import { Title, WishListContainer } from '../../styles/globalStyles';
+import { Breadcrumb, Title, WishListContainer } from '../../styles/globalStyled';
 import ProductList from '../components/ProductsList';
 import { useWishList } from '../hooks/wishlist';
 import { IProduct } from '../types';
@@ -9,6 +9,7 @@ export default function MyWishList({ products }:  { products: IProduct[] }) {
     const { wishList } = useWishList();
     return (
         <WishListContainer>
+        <Breadcrumb>Home {'>'} Lista de desejos</Breadcrumb>
         {wishList?.length ? (
             <ProductList filter products={products} />
         ) : (

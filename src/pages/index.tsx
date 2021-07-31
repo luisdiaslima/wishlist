@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React from 'react';
-import { MainContainer } from '../../styles/globalStyles';
+import { Breadcrumb, MainContainer, Title } from '../../styles/globalStyled';
 import ProductList from '../components/ProductsList';
 import { IProduct } from '../types';
 
 export default function Home({ products }:  { products: IProduct[] }) {
   return (
     <MainContainer>
-      <ProductList products={products} />
+        <Breadcrumb>Home</Breadcrumb>
+        <ProductList products={products} />
     </MainContainer>
   )
 }
